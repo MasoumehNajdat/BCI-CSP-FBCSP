@@ -38,20 +38,24 @@ Data are provided in Matlab format (*.mat) containing variables:
 ### Dataset 2 for Multi Class:
 Link is available in Reference
 
-4 Classes : 
+- 4 Classes : 
+
 Left hand : class 1
+
 Right hand : class 2
+
 Both feet : class 3
+
 Tongue : class 4
 
-25 electrodes are used, first 22 are EEG, last 3 are EOG
+- 25 electrodes are used, first 22 are EEG, last 3 are EOG
 Sampling frequency (fs) is 250Hz
 - 9 subjects
 
 
-1 trials : 6s
-1 run : 48 trials = 336-384s
-1 session = 6 runs = 288 trials = 2016-2304s
+- 1 trials : 6s
+- 1 run : 48 trials = 336-384s
+-  session = 6 runs = 288 trials
 
 
 ## Bandpass Filtering
