@@ -39,19 +39,17 @@ Link is available in Reference
 
 - 4 Classes : 
 
-Left hand : class 1
+    Left hand : class 1
 
-Right hand : class 2
+    Right hand : class 2
 
-Both feet : class 3
+    Both feet : class 3
 
-Tongue : class 4
+    Tongue : class 4
 
 - 25 electrodes are used, first 22 are EEG, last 3 are EOG
 Sampling frequency (fs) is 250Hz
 - 9 subjects
-
-
 - 1 trials : 6s
 - 1 run : 48 trials = 336-384s
 -  session = 6 runs = 288 trials
@@ -68,15 +66,33 @@ The frequency range of 8 - 30 Hz is used.
 Re-referencing channels' electrical activity by creating an average of all scalp channels and subtracting the resulting signal from each channel.
 
 
-## CSP Algorithm 
+## Feature Extraction Using CSP Algorithm 
 
-The common spatial patterns (CSP) algorithm is a feature extraction method that uses spatial filters to maximize the discriminability of two classes.
+Applying common spatial patterns (CSP) algorithm for feature extraction using spatial filters to maximize the discriminability of two classes.
 
 - normalizing data 
 - decomposing average covariance matrix of each class of each subject into 
 eigenvalues and eigenvectors 
 - sorting eignvectors by descending order
-- Choosing n column of common spatial filters and apply it to data.
+- Choosing M column of common spatial filters and apply it to data.
+
+## Filter Bank CSP
+Filter bank having bandpass filters of different  frequency ranges is applied to suppress the noise signals from raw EEG signals. The output of these sub-band filters is sent for feature extraction by applying common spatial pattern (CSP).
+
+
+## MultiClass CSP
+- One-Vs-All method
+ 
+    Apply CSP to extract spatial filters specific to one class versus rest of classes
+
+- One-Vs-One method:
+
+    Apply CSP to extract spatial filters specific to one class versus another class
+
+## Classification
+ Two different classifiers are trained on features:
+ -  support vector machine (SVM)
+ - k-Nearest Neighbor (KNN)
 
 ## References
 
