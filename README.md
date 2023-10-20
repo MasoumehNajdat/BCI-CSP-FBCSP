@@ -1,4 +1,4 @@
-# BCI-CSP-FBCSP
+# BCI-CSP-FBCSP-Python
 
 ---
 
